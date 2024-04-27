@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="retry">Retry</string>
+    <string name="pick_your_category_of_interest">Pick your category of interest</string>
+    <string name="news_app">News app</string>
+    <string name="categories">Categories</string>
+    <string name="settings">الاعدادات</string>
+    <string name="drawer_open">فتح</string>
+    <string name="drawer_close">غلق</string>
+    <string name="search_articles">Search Articles</string>
+    <string name="language">الغة</string>
+    <string name="english_language">الانجلزية</string>
+    <string name="arabic_language">العربية</string>
+</resources>

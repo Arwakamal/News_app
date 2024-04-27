@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">News C39</string>
+    <string name="retry">Retry</string>
+    <string name="pick_your_category_of_interest">Pick your category of interest</string>
+    <string name="news_app">News app</string>
+    <string name="categories">Categories</string>
+    <string name="settings">Settings</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="search_articles">Search Articles</string>
+    <string name="language">Language</string>
+    <string name="english_language">English</string>
+    <string name="arabic_language">Arabic</string>
+    <string name="view_full_article">View Full Article</string>
+</resources>
