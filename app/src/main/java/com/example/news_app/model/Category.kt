@@ -1,6 +1,7 @@
-package com.route.newsc39.model
+package com.example.news_app.model
 
-import com.route.newsc39.R
+import com.route.news.R
+
 
 data class Category (
     val id: String,

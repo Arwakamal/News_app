@@ -1,7 +1,7 @@
-package com.route.newsc39.api
+package com.example.news_app.api
 
-import com.route.newsc39.api.model.ArticlesResponse
-import com.route.newsc39.api.model.SourcesResponse
+import com.example.news_app.api.model.ArticlesResponse
+import com.example.news_app.api.model.SourcesResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -16,8 +16,8 @@ interface WebServices {
                     @Query("sources") sourceId: String):Call<ArticlesResponse>
 
     @GET("/v2/everything")
-    fun getArticlesByQuery(@Query("apiKey") apiKey: String =ApiManager.apiKey,
-                    @Query("q") query: String
+    fun getArticlesByQuery(@Query("apiKey") apiKey: String = ApiManager.apiKey,
+                           @Query("q") query: String
     )
     :Call<ArticlesResponse>
 

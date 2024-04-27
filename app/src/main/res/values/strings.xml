@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">News C39</string>
+    <string name="app_name">News</string>
     <string name="retry">Retry</string>
     <string name="pick_your_category_of_interest">Pick your category of interest</string>
     <string name="news_app">News app</string>

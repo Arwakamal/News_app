@@ -1,4 +1,4 @@
-package com.route.newsc39.ui.main.fragments.settings
+package com.example.news_app.main.fragments.settings
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
-import com.route.newsc39.R
-import com.route.newsc39.api.model.Constants
-import com.route.newsc39.databinding.FragmentSettingsBinding
-import com.route.newsc39.ui.main.MainActivity
+import com.example.news_app.api.model.Constants
+import com.example.news_app.main.MainActivity
+import com.route.news.R
+import com.route.news.databinding.FragmentSettingsBinding
+
 import java.util.Locale
 
 class SettingsFragment : Fragment() {
@@ -41,20 +42,12 @@ class SettingsFragment : Fragment() {
             )
         }
 
-     //   settingsSP =activity?.getSharedPreferences(Constants.SETTINGS_FILE_NAME, Context.MODE_PRIVATE)
-
-
     }
-//
-//    private fun checkAndSetSettingsPreferences() {
-//
-//        activateDarkMode(settingsSP?.getBoolean(Constants.MODE_KEY,false) ?:false)
-//    }
 
     private fun activateArabicLang(activate: Boolean) {
         setLocale(if (activate) Constants.ARABIC_CODE else Constants.ENGLISH_CODE)
        // activity?.let { ActivityCompat.recreate(it) }
-        startActivity(Intent(requireActivity(),MainActivity::class.java))
+        startActivity(Intent(requireActivity(), MainActivity::class.java))
         requireActivity().finish()
 
     }
@@ -95,7 +88,6 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setupExposedDropdownMenus() {
-        // setup
         val langItems = listOf(
             resources.getString(R.string.english_language),
             resources.getString(R.string.arabic_language)
@@ -104,7 +96,7 @@ class SettingsFragment : Fragment() {
             ArrayAdapter(requireContext(), R.layout.item_settings_dropdown_menus, langItems)
         binding.languageActv.setAdapter(lanAdapter)
 
-        // populate
+
         populateMenusWithOptions()
     }
 

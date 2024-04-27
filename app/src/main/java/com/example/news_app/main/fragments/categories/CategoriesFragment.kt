@@ -1,13 +1,13 @@
-package com.route.newsc39.ui.main.fragments.categories
+package com.example.news_app.main.fragments.categories
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.route.newsc39.databinding.FragmentCategoriesBinding
-import com.route.newsc39.model.Category
-import com.route.newsc39.ui.main.fragments.adapters.CategoriesAdapter
+import com.example.news_app.model.Category
+import com.example.news_app.main.fragments.adapters.CategoriesAdapter
+import com.route.news.databinding.FragmentCategoriesBinding
 
 class CategoriesFragment (val onCategoryClick: (Category) -> Unit): Fragment() {
     lateinit var binding: FragmentCategoriesBinding

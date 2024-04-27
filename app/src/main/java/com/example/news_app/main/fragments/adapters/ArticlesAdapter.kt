@@ -1,12 +1,12 @@
-package com.route.newsc39.ui.main.fragments.adapters
+package com.example.news_app.main.fragments.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.route.newsc39.api.model.Article
-import com.route.newsc39.databinding.ItemNewsBinding
+import com.example.news_app.api.model.Article
+import com.route.news.databinding.ItemNewsBinding
 
 class ArticlesAdapter(var articles: List<Article?>) : Adapter<ArticlesAdapter.ArticlesViewHolder>() {
 
@@ -43,8 +43,8 @@ class ArticlesAdapter(var articles: List<Article?>) : Adapter<ArticlesAdapter.Ar
             }
         }
     }
-    private  var onArticleClickListener:OnArticleClickListener?=null
-    fun setArticleClickListener (listener :OnArticleClickListener){
+    private  var onArticleClickListener: OnArticleClickListener?=null
+    fun setArticleClickListener (listener : OnArticleClickListener){
         onArticleClickListener=listener
     }
     fun interface OnArticleClickListener{

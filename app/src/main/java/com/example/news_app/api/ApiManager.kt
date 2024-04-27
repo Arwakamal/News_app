@@ -1,4 +1,4 @@
-package com.route.newsc39.api
+package com.example.news_app.api
 
 import android.util.Log
 import okhttp3.OkHttpClient
@@ -13,10 +13,10 @@ class ApiManager{
 
         private var retrofit: Retrofit? = null
 
-        fun getWebServices(): WebServices{
+        fun getWebServices(): WebServices {
             if(retrofit == null){
                 val loggingInterceptor = HttpLoggingInterceptor {
-                    Log.e("com.route.newsc39.api.ApiManager", "Body: $it") }
+                    Log.e("com.example.news_app.api.ApiManager", "Body: $it") }
                 loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
                 val okHttpClient = OkHttpClient.Builder()

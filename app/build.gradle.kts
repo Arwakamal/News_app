@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.route.newsc39"
+    namespace = "com.route.news"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.route.newsc39"
+        applicationId = "com.route.news"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -1,4 +1,4 @@
-package com.route.newsc39.api.model
+package com.example.news_app.api.model
 
 object Constants {
     const val ARABIC_CODE ="ar"

@@ -1,4 +1,4 @@
-package com.route.newsc39.ui.main.fragments.news
+package com.example.news_app.main.fragments.news
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,17 +9,18 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.gson.Gson
-import com.route.newsc39.R
-import com.route.newsc39.api.ApiManager
-import com.route.newsc39.api.model.ArticlesResponse
-import com.route.newsc39.api.model.Constants
-import com.route.newsc39.api.model.Source
-import com.route.newsc39.api.model.SourcesResponse
-import com.route.newsc39.databinding.FragmentNewsBinding
+import com.example.news_app.api.ApiManager
+import com.example.news_app.api.model.ArticlesResponse
+import com.example.news_app.api.model.Constants
+import com.example.news_app.api.model.Source
+import com.example.news_app.api.model.SourcesResponse
 
-import com.route.newsc39.ui.main.MainActivity
-import com.route.newsc39.ui.main.fragments.adapters.ArticlesAdapter
-import com.route.newsc39.ui.main.fragments.articleDetails.ArticleDetailsFragment
+import com.example.news_app.main.MainActivity
+import com.example.news_app.main.fragments.adapters.ArticlesAdapter
+import com.example.news_app.main.fragments.articleDetails.ArticleDetailsFragment
+import com.route.news.R
+import com.route.news.databinding.FragmentNewsBinding
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,17 +28,13 @@ import retrofit2.Response
 class NewsFragment(private val categoryId: String): Fragment(), OnTabSelectedListener {
 
     companion object{
-//        fun getInstance(category: Category): NewsFragment{
-//            val newsFragment = NewsFragment()
-//            newsFragment.category = category
-//            return newsFragment
-//        }
+
     }
     private lateinit var binding: FragmentNewsBinding
     var adapter = ArticlesAdapter(listOf())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (activity as MainActivity).binding.titleTv.text =categoryId
+        categoryId.also { (activity as MainActivity).binding.titleTv.text = it }
         (activity as MainActivity).binding.icOpenSearchImv.isVisible=true
 
     }
@@ -65,13 +62,13 @@ class NewsFragment(private val categoryId: String): Fragment(), OnTabSelectedLis
         }
         binding.tabLayout.addOnTabSelectedListener(this)
 
-        ( activity as MainActivity).setOnSearchClickListener{query->
+        ( activity as MainActivity).setOnSearchClickListener{ query->
            loadArticlesByQuery(query)
        }
         adapter.setArticleClickListener{article->
             val arguments =Bundle()
             arguments.putParcelable(Constants.PASSED_ARTICLE,article)
-            val articleDetailsFragment =ArticleDetailsFragment()
+            val articleDetailsFragment = ArticleDetailsFragment()
             articleDetailsFragment.arguments=arguments
 
             parentFragmentManager
@@ -131,10 +128,7 @@ class NewsFragment(private val categoryId: String): Fragment(), OnTabSelectedLis
     }
 
     private fun changeErrorVisibility(isVisible: Boolean, message: String = "") {
-//        binding.errorView.root.isVisible = isVisible
-//        if (isVisible) {
-//            binding.errorView.errorTv.text = message
-//        }
+
     }
 
     private fun changeLoaderVisibility(isVisible: Boolean) {

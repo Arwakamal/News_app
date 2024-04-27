@@ -1,12 +1,12 @@
-package com.route.newsc39.ui.main.fragments.adapters
+package com.example.news_app.main.fragments.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.route.newsc39.databinding.ItemCategoryBinding
-import com.route.newsc39.model.Category
+import com.example.news_app.model.Category
+import com.route.news.databinding.ItemCategoryBinding
 
 class CategoriesAdapter(val categories: List<Category>, val onCategoryClick: (category: Category) -> Unit): Adapter<CategoriesAdapter.CategoriesViewHolder>() {
 

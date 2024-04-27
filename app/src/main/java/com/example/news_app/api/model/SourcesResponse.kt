@@ -1,4 +1,4 @@
-package com.route.newsc39.api.model
+package com.example.news_app.api.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
